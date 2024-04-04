@@ -17,3 +17,15 @@ Then('the dates should be correct', () => {
     cy.wrap($date.text()).should('match', /\d{4,4}-\d{2,2}-\d{2,2}/)
   })
 });
+
+When('I click on today', () => {
+  cy.get('#goToToday').click()
+});
+
+Then('the schedule should highlight today', () => {
+  /* How to do this:
+  1) Get TODAY: new Date() (format the date to yyyy-mm-dd)
+  2) Find today in the date column using TODAY
+  3) See if the today date has a <tr> parent with the class "today"
+  */
+});
